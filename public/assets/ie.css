@@ -1,0 +1,19 @@
+/*
+ * ie.css
+ * Contains fixes for IE, which will be included using a conditional comment.
+ *
+ * Currently supported versions of IE
+ * 8, 9, 10, 11
+ *
+ *
+ * IE<=8
+ * Fix error in highcharts for anti-aliased fonts
+ * https://github.com/highslide-software/highcharts.com/issues/663
+ *
+ * This tweaks the suggested fix to isolate the x- and y-axis labels to avoid
+ * putting large white boxes on top of the bars for the n=123 labels.
+ */
+.highcharts-axis span,
+.highcharts-axis-labels span {
+  background-color: #ffffff;
+}
