@@ -1,4 +1,15 @@
 # Ember-cli-fingerprint-breaks-js-files
+This is an example repo to show an issue with asset fingerprinting. Specifically named asset files (in this case, ie.css) will be incorrectly searched-and-replaced inside of source javascript files, causing invalid javascript. 
+
+To show the issue, build the project with `environment=production`:
+
+```
+ember serve --environment=production
+```
+
+and navigate to http://localhost:4200.
+
+In Chrome, the error will be `Uncaught SyntaxError: Unexpected token ILLEGAL`.  
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
